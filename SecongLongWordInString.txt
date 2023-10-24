@@ -1,0 +1,14 @@
+/******************************************************************************
+Find Second largest word in a sentence
+*******************************************************************************/
+import java.util.stream.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+
+    String s = "Niladani eeee mgy naughty daughter  naughty i am and mgy love";
+    Arrays.stream(s.split(" ")).sorted(Comparator.comparingInt(String::length).reversed()).skip(2).limit(1).forEach(System.out::println);
+
+	}
+}
